@@ -45,7 +45,6 @@ export default function EnergyCharts() {
                                     cy="50%"
                                     outerRadius={80}
                                     fill="#8884d8"
-                                    label={({ value }) => `${value}%`}
                                 >
                                     {chartData.map((entry, index) => (
                                         <Cell key={`cell-${index}`} fill={COLORS[entry.name] || COLORS.other} />
@@ -53,8 +52,7 @@ export default function EnergyCharts() {
                                 </Pie>
                                 <Tooltip
                                     formatter={(value: any) => [
-                                        typeof value === 'number' ? `${value.toFixed(2)}%` : '0%',
-                                        'Share'
+                                        typeof value === 'number' ? `${value.toFixed(2)}%` : '0%'
                                     ]}
                                 />
                                 <Legend
