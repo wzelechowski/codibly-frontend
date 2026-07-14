@@ -52,7 +52,10 @@ export default function EnergyCharts() {
                                     ))}
                                 </Pie>
                                 <Tooltip
-                                    formatter={(value: number) => [`${value}%`, 'Share']}
+                                    formatter={(value: any) => [
+                                        typeof value === 'number' ? `${value.toFixed(1)}%` : '0%',
+                                        'Share'
+                                    ]}
                                 />
                                 <Legend
                                     formatter={(value: string) => value.charAt(0).toUpperCase() + value.slice(1)}
