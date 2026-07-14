@@ -53,7 +53,7 @@ export default function EnergyCharts() {
                                 </Pie>
                                 <Tooltip
                                     formatter={(value: any) => [
-                                        typeof value === 'number' ? `${value.toFixed(1)}%` : '0%',
+                                        typeof value === 'number' ? `${value.toFixed(2)}%` : '0%',
                                         'Share'
                                     ]}
                                 />
